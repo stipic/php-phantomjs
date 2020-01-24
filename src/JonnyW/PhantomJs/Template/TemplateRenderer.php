@@ -8,6 +8,7 @@
  */
 namespace JonnyW\PhantomJs\Template;
 
+use Twig\Environment;
 /**
  * PHP PhantomJs
  *
@@ -18,7 +19,7 @@ class TemplateRenderer implements TemplateRendererInterface
     /**
      * Twig environment instance.
      *
-     * @var \Twig_Environment
+     * @var \Environment
      * @access protected
      */
     protected $twig;
@@ -27,9 +28,9 @@ class TemplateRenderer implements TemplateRendererInterface
      * Internal constructor.
      *
      * @access public
-     * @param \Twig_Environment $twig
+     * @param \Environment $twig
      */
-    public function __construct(\Twig_Environment $twig)
+    public function __construct(Environment $twig)
     {
         $this->twig = $twig;
     }
